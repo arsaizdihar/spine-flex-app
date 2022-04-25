@@ -1,6 +1,5 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import AppLoading from "expo-app-loading";
 import { useFonts } from "expo-font";
 import { StatusBar } from "expo-status-bar";
 import React from "react";
@@ -15,10 +14,6 @@ function App() {
     "Nexa-Bold": require("./assets/fonts/Nexa-Bold.otf"),
     Kollektif: require("./assets/fonts/Kollektif.ttf"),
   });
-
-  if (!fontsLoaded) {
-    return <AppLoading />;
-  }
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="home">
